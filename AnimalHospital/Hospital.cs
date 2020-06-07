@@ -30,11 +30,13 @@ namespace AnimalHospital
 
         public void DischargePatient(Patient patient)
         {
-            if(!patients.Contains(patient))
+            if (!patients.Contains(patient))
             {
                 Console.WriteLine("Patient not in this hospital");
-            } else
+            }
+            else
             {
+                Console.WriteLine("{0} was discharged successfully", patient.name);
                 patients.Remove(patient);
             }
         }

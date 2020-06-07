@@ -32,7 +32,7 @@ namespace AnimalHospital
             } 
             else if(k == '2')
             {
-                Console.WriteLine("Not yet implemented!");
+                DischargePatient();
             } 
             else if(k == '3')
             {
@@ -71,6 +71,17 @@ namespace AnimalHospital
             }
 
             new Patient(name, age).AdmitTo(hospital);
+        }
+
+        static void DischargePatient()
+        {
+            string name;
+
+            Console.WriteLine("What is the patients name?");
+            name = Console.ReadLine();
+
+            hospital.DischargePatient(hospital.FindPatientByName(name));
+
         }
 
         static Hospital InitializeHospital()
