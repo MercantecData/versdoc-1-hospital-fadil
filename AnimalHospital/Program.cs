@@ -25,8 +25,10 @@ namespace AnimalHospital
             Console.WriteLine("0. Quit the Program");
             Console.WriteLine();
 
+            
             var k = Console.ReadKey().KeyChar;
-            if(k == '1')
+            Console.WriteLine();
+            if (k == '1')
             {
                 AdmitPatient();
             } 
