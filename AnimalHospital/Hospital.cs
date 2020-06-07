@@ -51,5 +51,15 @@ namespace AnimalHospital
 
             return null;
         }
+
+        public void ListDoctors()
+        {
+            Console.WriteLine("Name" + "  " + "Speciality");
+            foreach (Doctor doctor in doctors)
+            {
+
+                Console.WriteLine(doctor.name + "  " + doctor.speciality);
+            }
+        }
     }
 }
