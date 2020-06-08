@@ -52,6 +52,16 @@ namespace AnimalHospital
             return null;
         }
 
+        public void ListPatients()
+        {
+            Console.WriteLine("Name" + "  " + "Age");
+            {
+            foreach (Patient patient in patients)
+                
+                Console.WriteLine(patient.name + "  " + patient.age);
+            }
+        }
+
         public void ListDoctors()
         {
             Console.WriteLine("Name" + "  " + "Speciality");
@@ -61,37 +71,37 @@ namespace AnimalHospital
                 Console.WriteLine(doctor.name + "  " + doctor.speciality);
             }
         }
-        }
            }
+        }
+                    doc.assignedPatients.Add(patient);
              }
                 }
-                    doc.assignedPatients.Add(patient);
                 {
                     Console.WriteLine("Assigned doctor to patient");
-                if (doc == doctor)
                 {
+                if (doc == doctor)
                 foreach (Doctor doc in doctors)
-            else { 
 
+            else { 
             }
                 Console.WriteLine("Doctor or patient not in this hospital. Could not assign.");
-            {
             if (!patients.Contains(patient) || !doctors.Contains(doctor))
+            {
         {
         public void AssignDoctor(Doctor doctor, Patient patient)
 
-        }
             return null;
+        }
+
             }
-
-                }
                 {
-                    return d;
-                if (d.name == name)
-            {
-            foreach (var d in doctors)
-        {
-        public Doctor FindDoctorByName(string name)
+                }
 
+        public Doctor FindDoctorByName(string name)
+        {
+            foreach (var d in doctors)
+            {
+                if (d.name == name)
+                    return d;
     }
 }
