@@ -73,37 +73,37 @@ namespace AnimalHospital
                 Console.WriteLine(doctor.name + "  " + doctor.speciality);
             }
         }
-           }
-        }
-                    doc.assignedPatients.Add(patient);
-             }
-                }
-                {
-                    Console.WriteLine("Assigned doctor to patient");
-                {
-                if (doc == doctor)
-                foreach (Doctor doc in doctors)
-
-            else { 
-            }
-                Console.WriteLine("Doctor or patient not in this hospital. Could not assign.");
-            if (!patients.Contains(patient) || !doctors.Contains(doctor))
-            {
-        {
-        public void AssignDoctor(Doctor doctor, Patient patient)
-
-            return null;
-        }
-
-            }
-                {
-                }
-
         public Doctor FindDoctorByName(string name)
         {
             foreach (var d in doctors)
             {
                 if (d.name == name)
+                {
                     return d;
+                }
+            }
+
+            return null;
+        }
+
+        public void AssignDoctor(Doctor doctor, Patient patient)
+        {
+            if (!patients.Contains(patient) || !doctors.Contains(doctor))
+            {
+                Console.WriteLine("Doctor or patient not in this hospital. Could not assign.");
+            }
+            else
+            {
+
+                foreach (Doctor doc in doctors)
+                {
+                    if (doc == doctor)
+                    {
+                        Console.WriteLine("Assigned doctor to patient");
+                        doc.assignedPatients.Add(patient);
+                    }
+                }
+            }
+        }
     }
 }

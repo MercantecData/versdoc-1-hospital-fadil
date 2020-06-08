@@ -82,24 +82,25 @@ namespace AnimalHospital
             Console.WriteLine("What is the patients name?");
             name = Console.ReadLine();
 
+            hospital.DischargePatient(hospital.FindPatientByName(name));
 
         }
 
-            hospital.DischargePatient(hospital.FindPatientByName(name));
         static void ListPatients()
         {
             hospital.ListPatients();
 
         }
+
         static void AssignDoctor()
         {
             Console.WriteLine("What is the name of the doctor?");
-            Console.WriteLine("Patient name:");
             string doctor = Console.ReadLine();
+            Console.WriteLine("Patient name:");
             string patient = Console.ReadLine();
-        }
             hospital.AssignDoctor(hospital.FindDoctorByName(doctor), hospital.FindPatientByName(patient));
 
+        }
 
         static void ListDoctors()
         {
