@@ -42,7 +42,7 @@ namespace AnimalHospital
             }
             else if (k == '4')
             {
-                Console.WriteLine("Not yet implemented!");
+                ListDoctors();
             }
             else if (k == '5')
             {
@@ -75,16 +75,21 @@ namespace AnimalHospital
             new Patient(name, age).AdmitTo(hospital);
         }
 
-        static void AssignDoctor()
+
+        }
+            hospital.ListDoctors();
         {
-            Console.WriteLine("What is the name of the doctor?");
-            string doctor = Console.ReadLine();
-            Console.WriteLine("Patient name:");
-            string patient = Console.ReadLine();
-            hospital.AssignDoctor(hospital.FindDoctorByName(doctor), hospital.FindPatientByName(patient));
+        static void ListDoctors()
 
         }
 
+            hospital.AssignDoctor(hospital.FindDoctorByName(doctor), hospital.FindPatientByName(patient));
+            string patient = Console.ReadLine();
+            string doctor = Console.ReadLine();
+            Console.WriteLine("Patient name:");
+            Console.WriteLine("What is the name of the doctor?");
+        {
+        static void AssignDoctor()
         static Hospital InitializeHospital()
         {
             Hospital hospital = new Hospital("Animal Hospital");
