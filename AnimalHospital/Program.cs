@@ -34,7 +34,7 @@ namespace AnimalHospital
             } 
             else if(k == '2')
             {
-                Console.WriteLine("Not yet implemented!");
+                DischargePatient();
             } 
             else if(k == '3')
             {
@@ -75,26 +75,37 @@ namespace AnimalHospital
             new Patient(name, age).AdmitTo(hospital);
         }
 
+        static void DischargePatient()
+        {
+            string name;
+
+            Console.WriteLine("What is the patients name?");
+            name = Console.ReadLine();
+
 
         }
-            hospital.ListDoctors();
+
+            hospital.DischargePatient(hospital.FindPatientByName(name));
+        static void ListPatients()
         {
-        static void ListDoctors()
+            hospital.ListPatients();
 
-
+        }
+        static void AssignDoctor()
+        {
+            Console.WriteLine("What is the name of the doctor?");
+            Console.WriteLine("Patient name:");
+            string doctor = Console.ReadLine();
+            string patient = Console.ReadLine();
         }
             hospital.AssignDoctor(hospital.FindDoctorByName(doctor), hospital.FindPatientByName(patient));
-            string patient = Console.ReadLine();
-            string doctor = Console.ReadLine();
-            Console.WriteLine("Patient name:");
-            Console.WriteLine("What is the name of the doctor?");
-        {
-        static void AssignDoctor()
 
-        }
-            hospital.ListPatients();
+
+        static void ListDoctors()
         {
-        static void ListPatients()
+            hospital.ListDoctors();
+        }
+
         static Hospital InitializeHospital()
         {
             Hospital hospital = new Hospital("Animal Hospital");
