@@ -46,7 +46,7 @@ namespace AnimalHospital
             }
             else if (k == '5')
             {
-                Console.WriteLine("Not yet implemented!");
+                AssignDoctor();
             }
             else if (k == '0')
             {
@@ -73,6 +73,16 @@ namespace AnimalHospital
             }
 
             new Patient(name, age).AdmitTo(hospital);
+        }
+
+        static void AssignDoctor()
+        {
+            Console.WriteLine("What is the name of the doctor?");
+            string doctor = Console.ReadLine();
+            Console.WriteLine("Patient name:");
+            string patient = Console.ReadLine();
+            hospital.AssignDoctor(hospital.FindDoctorByName(doctor), hospital.FindPatientByName(patient));
+
         }
 
         static Hospital InitializeHospital()
